@@ -1,0 +1,26 @@
+{
+  "name": "node-ts-template",
+  "type": "module",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "tsx watch src/server.ts",
+    "format": "npx @biomejs/biome check --apply ./src/**/*.ts",
+    "build": "tsup src"
+  },
+  "keywords": [],
+  "author": "Diego Machado",
+  "license": "ISC",
+  "devDependencies": {
+    "@biomejs/biome": "1.5.3",
+    "@types/node": "^20.11.20",
+    "tsup": "^8.0.2",
+    "tsx": "^4.7.1",
+    "typescript": "^5.3.3"
+  },
+  "dependencies": {
+    "dotenv": "^16.4.5",
+    "zod": "^3.22.4"
+  }
+}
