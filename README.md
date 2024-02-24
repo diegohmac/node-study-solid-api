@@ -1,52 +1,30 @@
-# Typescript Node Template
+# App
 
-This template provides a starting point for building Node applications using TypeScript. It includes essential elements like:
+GymPass style API.
 
-- **TypeScript configuration**: Set up for compiling and running TypeScript code.
-- **Linting and formatting**: Configured Biome to ensure code quality and consistency.
+## FRs (Functional Requirements)
+- [ ] It should allow for user registration.
+- [ ] It should allow user to authenticate.
+- [ ] It should retrieve a authenticated user.
+- [ ] It should retrieve the amount of check-ins of the authenticated user.
+- [ ] It should retrieve the check-ins history.
+- [ ] It should allow to search for near gyms.
+- [ ] It should allow the user to search for gyms by name.
+- [ ] It should allow to check-in on a gym.
+- [ ] It should allow to validate a user's check-in.
+- [ ] It should allow to register a gym.
+- [ ] 
 
-## Packages
-| Package | Description |
-| --- | --- |
-| `typescript` | For type safe JS applications.
-| `@types/node` |  Type definitions for Node core modules and enables seamless integration of TS with Node applications.
-| `tsx` | CLI command for running TS and ESM in both `commonjs` and `module` package types.
-| `tsup` | Bundle TS with no config.
-| `@biomejs/biome` | Format, lint, and more in a fraction of a second.
-| `dotenv` | Loads environment variables.
-| `zod` | TypeScript-first schema validation with static type inference
+## BRs (Business Rules)
+- [ ] It should not allow the user to register with duplicated email.
+- [ ] It should not allow the user to check-in more than once each day.
+- [ ] It should only allow the user to check-in when within 100m of the gym.
+- [ ] It should allow a check-in to be validated up until 20min after it has been created.
+- [ ] It should only allow admins to validate a check-in.
+- [ ] It should only allow admins to register a gym.
 
-## Setup
-
-### Biome
-Install the VsCode Biome extension and you can either run `npx @biomejs/biome init` to create a `biome.json` config file or you can copy paste my custom config:
-
-biome.json
-```json
-{
-  "$schema": "https://biomejs.dev/schemas/1.5.3/schema.json",
-  "organizeImports": {
-    "enabled": true
-  },
-  "files": {
-    "ignore": ["dist/*", "build/*"]
-  },
-  "formatter": {
-    "indentStyle": "space",
-    "indentWidth": 2,
-    "lineWidth": 80
-  },
-  "javascript": {
-    "formatter": {
-      "quoteStyle": "single",
-      "trailingComma": "es5"
-    }
-  },
-  "linter": {
-    "enabled": true,
-    "rules": {
-      "recommended": true
-    }
-  }
-}
-```
+## NFRs (Non-Functional Requirements)
+- [ ] It should encrypt the user password.
+- [ ] It should persist the data in a PostgresSQL database.
+- [ ] It should paginate all GET endpoints with 20 items per page.
+- [ ] It should identify a user based on a JWT (JSON Web Token).
