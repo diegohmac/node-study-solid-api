@@ -5,6 +5,10 @@ node_modules
 .env
 .env.test
 
+# Docker
+docker-compose.yml
+docker-compose.yaml
+
 # Build
 dist
 build
