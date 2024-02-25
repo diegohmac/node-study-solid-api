@@ -3,7 +3,7 @@
 GymPass style API.
 
 ## FRs (Functional Requirements)
-- [ ] It should allow for user registration.
+- [x] It should allow for user registration.
 - [ ] It should allow user to authenticate.
 - [ ] It should retrieve a authenticated user.
 - [ ] It should retrieve the amount of check-ins of the authenticated user.
@@ -16,7 +16,7 @@ GymPass style API.
 - [ ] 
 
 ## BRs (Business Rules)
-- [ ] It should not allow the user to register with duplicated email.
+- [x] It should not allow the user to register with duplicated email.
 - [ ] It should not allow the user to check-in more than once each day.
 - [ ] It should only allow the user to check-in when within 100m of the gym.
 - [ ] It should allow a check-in to be validated up until 20min after it has been created.
@@ -24,7 +24,7 @@ GymPass style API.
 - [ ] It should only allow admins to register a gym.
 
 ## NFRs (Non-Functional Requirements)
-- [ ] It should encrypt the user password.
-- [ ] It should persist the data in a PostgresSQL database.
+- [x] It should encrypt the user password.
+- [x] It should persist the data in a PostgresSQL database.
 - [ ] It should paginate all GET endpoints with 20 items per page.
 - [ ] It should identify a user based on a JWT (JSON Web Token).
