@@ -17,7 +17,7 @@ GymPass style API.
 ## BRs (Business Rules)
 - [x] It should not allow the user to register with duplicated email.
 - [x] It should not allow the user to check-in more than once each day.
-- [ ] It should only allow the user to check-in when within 100m of the gym.
+- [x] It should only allow the user to check-in when within 100m of the gym.
 - [ ] It should allow a check-in to be validated up until 20min after it has been created.
 - [ ] It should only allow admins to validate a check-in.
 - [ ] It should only allow admins to register a gym.
