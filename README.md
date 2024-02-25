@@ -4,7 +4,7 @@ GymPass style API.
 
 ## FRs (Functional Requirements)
 - [x] It should allow for user registration.
-- [ ] It should allow user to authenticate.
+- [x] It should allow user to authenticate.
 - [ ] It should retrieve a authenticated user.
 - [ ] It should retrieve the amount of check-ins of the authenticated user.
 - [ ] It should retrieve the check-ins history.
@@ -13,7 +13,6 @@ GymPass style API.
 - [ ] It should allow to check-in on a gym.
 - [ ] It should allow to validate a user's check-in.
 - [ ] It should allow to register a gym.
-- [ ] 
 
 ## BRs (Business Rules)
 - [x] It should not allow the user to register with duplicated email.
