@@ -12,7 +12,7 @@ GymPass style API.
 - [ ] It should allow the user to search for gyms by name.
 - [x] It should allow to check-in on a gym.
 - [ ] It should allow to validate a user's check-in.
-- [ ] It should allow to register a gym.
+- [x] It should allow to register a gym.
 
 ## BRs (Business Rules)
 - [x] It should not allow the user to register with duplicated email.
