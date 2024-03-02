@@ -13,6 +13,10 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
       .slice((page - 1) * 20, page * 20);
   }
 
+  async findById(checkInId: string) {
+    return this.checkIns.find((checkIn) => checkIn.id === checkInId) || null;
+  }
+
   async findByUserIdOnDate(userId: string, date: Date) {
     const startOfDay = dayjs(date).startOf('date');
     const endOfDay = dayjs(date).endOf('date');
@@ -46,6 +50,16 @@ export class InMemoryCheckInsRepository implements CheckInsRepository {
     };
 
     this.checkIns.push(checkIn);
+
+    return checkIn;
+  }
+
+  async save(checkIn: CheckIn) {
+    const index = this.checkIns.findIndex((item) => item.id === checkIn.id);
+
+    if (index >= 0) {
+      this.checkIns[index] = checkIn;
+    }
 
     return checkIn;
   }
