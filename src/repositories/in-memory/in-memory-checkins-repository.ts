@@ -7,6 +7,12 @@ import { CheckInsRepository } from '../check-ins-repository';
 export class InMemoryCheckInsRepository implements CheckInsRepository {
   public checkIns: CheckIn[] = [];
 
+  async findManyByUserId(userId: string, page: number) {
+    return this.checkIns
+      .filter((checkIn) => checkIn.userId === userId)
+      .slice((page - 1) * 20, page * 20);
+  }
+
   async findByUserIdOnDate(userId: string, date: Date) {
     const startOfDay = dayjs(date).startOf('date');
     const endOfDay = dayjs(date).endOf('date');
