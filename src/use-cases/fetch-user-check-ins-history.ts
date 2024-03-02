@@ -5,7 +5,7 @@ type FetchUserCheckInsHistoryParams = {
   page: number;
 };
 
-export class FetchUserCheckInsHistoryCase {
+export class FetchUserCheckInsHistoryUseCase {
   constructor(private checkInsRepository: CheckInsRepository) {}
 
   async execute({ userId, page }: FetchUserCheckInsHistoryParams) {
