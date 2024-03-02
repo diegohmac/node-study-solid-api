@@ -7,7 +7,7 @@ GymPass style API.
 - [x] It should allow user to authenticate.
 - [x] It should retrieve a authenticated user.
 - [ ] It should retrieve the amount of check-ins of the authenticated user.
-- [ ] It should retrieve the check-ins history.
+- [x] It should retrieve the check-ins history.
 - [ ] It should allow to search for near gyms.
 - [ ] It should allow the user to search for gyms by name.
 - [x] It should allow to check-in on a gym.
@@ -25,5 +25,5 @@ GymPass style API.
 ## NFRs (Non-Functional Requirements)
 - [x] It should encrypt the user password.
 - [x] It should persist the data in a PostgresSQL database.
-- [ ] It should paginate all GET endpoints with 20 items per page.
+- [x] It should paginate all GET endpoints with 20 items per page.
 - [ ] It should identify a user based on a JWT (JSON Web Token).
