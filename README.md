@@ -6,7 +6,7 @@ GymPass style API.
 - [x] It should allow for user registration.
 - [x] It should allow user to authenticate.
 - [x] It should retrieve a authenticated user.
-- [ ] It should retrieve the amount of check-ins of the authenticated user.
+- [x] It should retrieve the amount of check-ins of the authenticated user.
 - [x] It should retrieve the check-ins history.
 - [ ] It should allow to search for near gyms.
 - [ ] It should allow the user to search for gyms by name.
