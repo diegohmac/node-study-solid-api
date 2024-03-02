@@ -1,3 +1,5 @@
+import { MaxDistanceError } from '@/errors/max-distance-error';
+import { MaxNumbersOfCheckInsError } from '@/errors/max-numbers-of-check-ins-error';
 import { ResourceNotFoundError } from '@/errors/resource-not-found-error';
 import { CheckInsRepository } from '@/repositories/check-ins-repository';
 import { GymsRepository } from '@/repositories/gyms-repository';
@@ -37,14 +39,14 @@ export class CheckInUseCase {
     const MAX_DISTANCE_IN_KILOMETERS = 0.1;
 
     if (distance > MAX_DISTANCE_IN_KILOMETERS) {
-      throw new Error();
+      throw new MaxDistanceError();
     }
 
     const hasCheckInOnSameDay =
       await this.checkInsRepository.findByUserIdOnDate(userId, new Date());
 
     if (hasCheckInOnSameDay) {
-      throw new Error('User already checked in today');
+      throw new MaxNumbersOfCheckInsError();
     }
 
     const checkIn = await this.checkInsRepository.create({
