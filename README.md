@@ -18,12 +18,12 @@ GymPass style API.
 - [x] It should not allow the user to register with duplicated email.
 - [x] It should not allow the user to check-in more than once each day.
 - [x] It should only allow the user to check-in when within 100m of the gym.
-- [ ] It should allow a check-in to be validated up until 20min after it has been created.
-- [ ] It should only allow admins to validate a check-in.
-- [ ] It should only allow admins to register a gym.
+- [x] It should allow a check-in to be validated up until 20min after it has been created.
+- [x] It should only allow admins to validate a check-in.
+- [x] It should only allow admins to register a gym.
 
 ## NFRs (Non-Functional Requirements)
 - [x] It should encrypt the user password.
 - [x] It should persist the data in a PostgresSQL database.
 - [x] It should paginate all GET endpoints with 20 items per page.
-- [ ] It should identify a user based on a JWT (JSON Web Token).
+- [x] It should identify a user based on a JWT (JSON Web Token).
