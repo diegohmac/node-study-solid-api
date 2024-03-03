@@ -12,7 +12,7 @@ export async function history(request: FastifyRequest, reply: FastifyReply) {
 
   const fetchUserCheckInsHistoryGymUseCase =
     makeFetchUserCheckInsHistoryUseCase();
-  const checkIns = await fetchUserCheckInsHistoryGymUseCase.execute({
+  const { checkIns } = await fetchUserCheckInsHistoryGymUseCase.execute({
     userId: request.user.sub,
     page,
   });
