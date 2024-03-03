@@ -15,12 +15,11 @@ export async function create(request: FastifyRequest, reply: FastifyReply) {
 
   const { gymId } = createCheckInsParamsSchema.parse(request.params);
   const { latitude, longitude } = createCheckInBodySchema.parse(request.body);
-  const userId = request.user.sub;
 
   const checkInUseCase = makeCheckInUseCase();
   await checkInUseCase.execute({
     gymId,
-    userId,
+    userId: request.user.sub,
     userLatitude: latitude,
     userLongitude: longitude,
   });
